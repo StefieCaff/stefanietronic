@@ -1,8 +1,17 @@
 .sound {
-    margin: 5px 40px;
+    margin: 10px 15px;
     color: rgba(60, 59, 59, 0.568);
     font-weight: 600;
-    font-size: 18px;
+    font-size: 12px;
+    opacity: 1;
+        /* Initially hide the caption */
+        transition: opacity 0.3s ease;
+        /* Add a smooth transition effect */
+}
+
+.sound:hover {
+    opacity: 1;
+    /* Show the caption on hover */
 }
 
 .figure {
