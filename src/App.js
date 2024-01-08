@@ -1,11 +1,12 @@
 //import logo from './logo.svg';
 import './App.css';
-import Airplane from './Components/Airplane/Airplane';
+import Home from './Pages/Home';
+
 
 function App() {
   return (
     <>
-      <Airplane/>
+      <Home/>
     </>
     // <div className="App">
     //   <header className="App-header">

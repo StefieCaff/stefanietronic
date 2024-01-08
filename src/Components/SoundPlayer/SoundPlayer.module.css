@@ -1,0 +1,13 @@
+.sound {
+    margin: 5px 40px;
+    color: rgba(60, 59, 59, 0.568);
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.figure {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px;
+}
