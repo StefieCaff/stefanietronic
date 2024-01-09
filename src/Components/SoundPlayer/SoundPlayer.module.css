@@ -1,33 +1,47 @@
 .figure {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     margin: 10px;
+    cursor: pointer;
 }
 
+.recordPlayerContainer {
+    position: relative;
+    opacity: .9;
+    transition: opacity 0.9s ease;
+    margin-left: 15px;
+    margin-top: 5px;
+}
 .recordPlayer {
-    display: flex;
-    height: 40px;
-    width: 40px;
-    opacity: 1;
+    top: 0;
+    left: 0;
+    height: 4em;
+    width: 4em;
+    pointer-events: none;
+    /* Make sure the SVG doesn't interfere with hover */
+    opacity: .9;
 }
-
 .sound {
+    position: absolute;
+    top: 0;
+    left: 0;
     margin: 10px 15px;
     color: rgba(60, 59, 59, 0.568);
     font-weight: 600;
     font-size: 12px;
     opacity: 0;
-        /* Initially hide the caption */
-        transition: opacity 0.3s ease;
-        /* Add a smooth transition effect */
+    transition: opacity 0.9s ease;
 }
-
-.sound:hover {
-    opacity: 1;
-    /* Show the caption on hover */
+.audioCaption {
+    margin-left: 15px;
 }
-
-.recordPlayer:hover {
+.figure:hover .recordPlayerContainer {
     opacity: 0;
+    /* Hide the SVG on hover */
+}
+.figure:hover .sound {
+    opacity: 1;
+    /* Show the player on hover */
 }

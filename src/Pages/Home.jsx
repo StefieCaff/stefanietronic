@@ -13,7 +13,7 @@ const Home = () => {
             <Airplane />
             <SoundPlayer
                sources={audioSources}
-               ariaLabel="Push play for soothing summer cricket sounds"
+               ariaLabel="Push play for soothing nature sounds"
             />
         </>
   )
