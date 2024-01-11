@@ -1,0 +1,48 @@
+/*
+button styling
+*/
+
+.buttonContainer {
+    display: flex;
+    
+}
+
+/* @media screen and (min-width: 480px) {
+    .buttonContainer {
+        top: 20;
+        left: unset;
+        right: 20;
+    }
+}
+
+@media screen and (min-width: 768) {
+    .buttonContainer {
+        top: -75;
+    }
+} */
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    cursor: pointer;
+    border: none;
+    font-family: 'Rajdhani', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 18px;
+    transition: 0.9s;
+    background-size: 200% auto;
+    color: rgba(60, 59, 59, 0.568);
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, #a1c4fd 0%, #c2e9fb 51%, #a1c4fd 100%);
+}
+
+.btn:hover,
+.btn:focus {
+    background-position: right center;
+    background-image: linear-gradient(to left, #84fab0 0%, #8fd3f4 51%, #84fab0 100%);
+}

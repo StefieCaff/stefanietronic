@@ -1,4 +1,4 @@
-import Airplane from "../Components/Airplane/Airplane";
+import Airplane from "../Components/Airplane/Airplane"
 import SoundPlayer from "../Components/SoundPlayer/SoundPlayer";
 
 const audioSources = [
@@ -9,13 +9,13 @@ const audioSources = [
   
 const Home = () => {
     return (
-        <>
+        <div className="styles.flex">
             <Airplane />
             <SoundPlayer
                sources={audioSources}
                ariaLabel="Push play for soothing nature sounds"
             />
-        </>
+        </div>
   )
 };
 
