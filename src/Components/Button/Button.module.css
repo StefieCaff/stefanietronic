@@ -45,4 +45,5 @@ button styling
 .btn:focus {
     background-position: right center;
     background-image: linear-gradient(to left, #84fab0 0%, #8fd3f4 51%, #84fab0 100%);
+    outline: none;
 }

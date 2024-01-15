@@ -5,28 +5,35 @@
     align-items: flex-start;
     margin: 10px;
     cursor: pointer;
+    outline: none;
 }
 
-.recordPlayerContainer {
+.recordPlayerContainer,
+.figure:focus-within .recordPlayerContainer {
     position: relative;
     opacity: .9;
     transition: opacity 0.9s ease;
     margin-left: 15px;
     margin-top: 5px;
     padding: 0 5px;
+    background-image: linear-gradient(to right, #a1c4fd 0%, #c2e9fb 51%, #a1c4fd 100%);
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     border-radius: 10px;
 }
-.recordPlayer {
+
+.recordPlayer,
+.figure:focus-within .recordPlayer {
     top: 0;
     left: 0;
     height: 4em;
     width: 4em;
     pointer-events: none;
-    /* Make sure the SVG doesn't interfere with hover */
+    /* Make sure the SVG doesn't interfere with focus */
     opacity: .9;
 }
-.sound {
+
+.sound,
+.figure:focus-within .sound {
     position: absolute;
     top: 0;
     left: 0;
@@ -37,14 +44,19 @@
     opacity: 0;
     transition: opacity 0.9s ease;
 }
+
 .audioCaption {
     margin-left: 15px;
 }
-.figure:hover .recordPlayerContainer {
+
+.figure:hover .recordPlayerContainer,
+.figure:focus-within .recordPlayerContainer {
     opacity: 0;
-    /* Hide the SVG on hover */
+    /* Hide the SVG on hover or focus */
 }
-.figure:hover .sound {
+
+.figure:hover .sound,
+.figure:focus-within .sound {
     opacity: 1;
-    /* Show the player on hover */
+    /* Show the player on hover or focus */
 }
