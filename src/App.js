@@ -1,29 +1,28 @@
-//import logo from './logo.svg';
+// external
+import { Routes, Route } from 'react-router-dom';
+import { lazy, Suspense } from 'react';
+
+//internal
 import './App.css';
+import Spinner from './Components/Spinner';
 import Home from './Pages/Home';
+import Error from './Pages/Error';
+
+const Portfolio = lazy(() => import('./Pages/Portfolio'));
+const Experience = lazy(() => import("./Pages/Experience"));
+const Contact = lazy(() => import("./Pages/Contact"));
 
 
 function App() {
   return (
     <>
-      <Home/>
+      
+      <Suspense fallback={<Spinner/>}>
+        <Home />
+      </Suspense>
+      
+      
     </>
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
   )
 }
 
