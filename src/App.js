@@ -18,23 +18,53 @@ const Contact = lazy(() => import("./Pages/Contact"));
 function App() {
   return (
     <>
-      
-      <Suspense fallback={<Spinner/>}>
-        <Nav/>
+      <Suspense fallback={<Spinner />}>
+        <Nav />
       </Suspense>
       <Routes>
         <Route
-          path="/"
-          element={<Suspense fallback={<Spinner />}><Home /></Suspense>
-        }
+          path='/'
+          element={
+            <Suspense fallback={<Spinner />}>
+              <Home />
+            </Suspense>
+          }
         />
-          
-        
+        <Route
+          path='/Portfolio'
+          element={
+            <Suspense fallback={<Spinner />}>
+              <Portfolio />
+            </Suspense>
+          }
+        />
+        <Route
+          path='/Experience'
+          element={
+            <Suspense fallback={<Spinner />}>
+              <Experience />
+            </Suspense>
+          }
+        />
+        <Route
+          path='/Contact'
+          element={
+            <Suspense fallback={<Spinner />}>
+              <Contact />
+            </Suspense>
+          }
+        />
+        <Route
+          path='*'
+          element={
+            <Suspense fallback={<Spinner />}>
+              <Error />
+            </Suspense>
+          }
+        />
       </Routes>
-      
-      
     </>
-  )
+  );
 }
 
 export default App;
