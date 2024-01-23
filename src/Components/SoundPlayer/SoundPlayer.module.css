@@ -16,7 +16,7 @@
     transition: opacity 0.9s ease;
     margin-left: 15px;
     margin-top: 5px;
-    padding: 0 5px;
+    padding: 4px 6px 0 6px;
     background-image: linear-gradient(to right, #a1c4fd 0%, #c2e9fb 51%, #a1c4fd 100%);
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     border-radius: 10px;
@@ -26,8 +26,8 @@
 .figure:focus-within .recordPlayer {
     top: 0;
     left: 0;
-    height: 4em;
-    width: 4em;
+    height: 2.5em;
+    width: 2.5em;
     /* pointer-events: none; */
     /* Make sure the SVG doesn't interfere with focus */
     opacity: .9;
