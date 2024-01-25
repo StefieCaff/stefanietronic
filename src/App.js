@@ -23,7 +23,7 @@ function App() {
       </Suspense>
       <Routes>
         <Route
-          path=''
+          path='/'
           element={
             <Suspense fallback={<Spinner />}>
               <Home />
