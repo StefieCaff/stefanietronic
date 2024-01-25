@@ -24,6 +24,7 @@ const FlexHeader = ({ children }) => {
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: '10px',
+    backgroundColor: 'green',
   };
 
   return <div style={flexContainerStyle}>{children}</div>;

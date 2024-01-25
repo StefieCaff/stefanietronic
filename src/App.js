@@ -23,7 +23,7 @@ function App() {
       </Suspense>
       <Routes>
         <Route
-          path='/'
+          path=''
           element={
             <Suspense fallback={<Spinner />}>
               <Home />
@@ -31,7 +31,7 @@ function App() {
           }
         />
         <Route
-          path='/Portfolio'
+          path='/portfolio'
           element={
             <Suspense fallback={<Spinner />}>
               <Portfolio />
@@ -39,7 +39,7 @@ function App() {
           }
         />
         <Route
-          path='/Experience'
+          path='/experience'
           element={
             <Suspense fallback={<Spinner />}>
               <Experience />
@@ -47,7 +47,7 @@ function App() {
           }
         />
         <Route
-          path='/Contact'
+          path='/contact'
           element={
             <Suspense fallback={<Spinner />}>
               <Contact />
