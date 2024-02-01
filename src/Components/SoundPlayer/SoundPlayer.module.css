@@ -1,8 +1,9 @@
 .figure {
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    margin: 10px;
+    align-items: center;
+    /* flex-direction: row;
+    align-items: flex-start; */
+    /* margin: 10px; */
     cursor: pointer;
     outline: none;
 }
@@ -11,9 +12,9 @@
 .figure:focus-within .recordPlayerContainer {
     opacity: .9;
     transition: opacity 0.9s ease;
-    margin-left: 15px;
-    margin-top: 5px;
-    padding: 2px 5px 3px 5px;
+    /* margin-left: 15px;
+    margin-top: 5px; */
+    padding: 3px 6px 4px 6px;
     background-image: linear-gradient(to right, #a1c4fd 0%, #c2e9fb 51%, #a1c4fd 100%);
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     border-radius: 10px;
@@ -23,6 +24,7 @@
 .figure:focus-within .recordPlayer {
     height: 2.5em;
     width: 2.5em;
+    margin: 2px;
     pointer-events: none;
     /* Make sure the SVG doesn't interfere with focus */
     opacity: .9;
@@ -30,11 +32,11 @@
 
 .sound,
 .figure:focus-within .sound {
-    margin: 10px 15px;
+    /* margin: 10px 15px; */
     color: rgba(60, 59, 59, 0.568);
     font-weight: 600;
     font-size: 12px;
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.9s ease;
 }
 

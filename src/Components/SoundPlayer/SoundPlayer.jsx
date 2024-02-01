@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import styles from './SoundPlayer.module.css';
 import Svg from '../Svg/Svg';
 
@@ -7,7 +8,7 @@ const SoundPlayer = ({ sources, ariaLabel, className }) => {
   return (
     <figure className={styles.figure}>
       <div className={styles.recordPlayerContainer}>
-        <Svg symbolId='record-player' className={`${styles.recordPlayer} `} aria-label="Record Player"/>
+        <Svg symbolId='recordplayer' className={`${styles.recordPlayer} `} aria-label="Record Player"/>
       </div>
       <div className={styles.sound}>
         {sources && sources.length > 0 && (

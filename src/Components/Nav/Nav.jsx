@@ -3,47 +3,41 @@ import { Link } from "react-router-dom";
 
 import SoundPlayer from "../SoundPlayer/SoundPlayer";
 import { cricketSong } from "../../Config/audioSources";
-import { FlexHeader } from "../Containers/Containers";
-// import Svg from "../Svg/Svg";
-
+import Svg from "../Svg/Svg";
+import styles from "./Nav.module.css";
+import Stars from "../Stars/Stars";
 
 const Nav = () => {
-    const linkStyle = {
-        pointer: 'cursor',
-        backgroundColor: 'red',
-        padding: '10px',
-        margin: '10px',
-        border: '1px solid gray',
-        borderRadius: '5px',
-  }
-
-    return (
-        <FlexHeader>
-            <SoundPlayer
-               sources={cricketSong}
-               ariaLabel="Push play for soothing nature sounds"
-            />
-            <ul>
-                <li>
-                    <Link to={"/contact"} style={linkStyle}>
-                        {/* <Svg symbolId='paperplane'></Svg> */}
-                    </Link>
-                </li>
-                <li>
-                    <Link to={"/experience"} style={linkStyle}>
-                        {/* <Svg symbolId='tree'></Svg> */}
-                    </Link>
-                </li>
-                <li>
-                    <Link to={"/portfolio"} style={linkStyle}>
-                        {/* <Svg symbolId='nippers'></Svg> */}
-                    </Link>
-                </li>
-            </ul>
-            
-
-        </FlexHeader>
-    )
+  return (
+    <div className={styles.navWrapper}>
+      <Stars />
+      <div className={styles.navContainer}>
+        <SoundPlayer sources={cricketSong} ariaLabel="Push play for soothing nature sounds" />
+        <ul className={styles.navList}>
+          <li className={styles.navItem}>
+            <Link to={"/contact"}>
+              <Svg symbolId='paperplane' className={styles.linkSvg} height='2.5em' width='2.5em'></Svg>
+            </Link>
+          </li>
+          <li className={styles.navItem}>
+            <Link to={"/experience"} >
+              <Svg symbolId='tree' className={styles.linkSvg} height='2.5em' width='2.5em' />
+            </Link>
+          </li>
+          <li className={styles.navItem}>
+            <Link to={"/portfolio"} >
+              <Svg symbolId='nippers' className={styles.linkSvg} height='2.5em' width='2.5em' />
+            </Link>
+          </li>
+          <li className={styles.navItem}>
+            <Link to={"/"} >
+              <Svg symbolId='snailshell' className={styles.linkSvg} height='2.5em' width='2.5em' />
+            </Link>
+          </li>
+        </ul>
+      </div>
+    </div>
+  )
 };
 
 export default Nav;
