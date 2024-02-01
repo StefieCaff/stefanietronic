@@ -12,7 +12,6 @@ const Nav = () => {
     <div className={styles.navWrapper}>
       <Stars />
       <div className={styles.navContainer}>
-        <SoundPlayer sources={cricketSong} ariaLabel="Push play for soothing nature sounds" />
         <ul className={styles.navList}>
           <li className={styles.navItem}>
             <Link to={"/contact"}>
@@ -33,6 +32,9 @@ const Nav = () => {
             <Link to={"/"} >
               <Svg symbolId='snailshell' className={styles.linkSvg} height='2.5em' width='2.5em' />
             </Link>
+          </li>
+          <li>
+            <SoundPlayer sources={cricketSong} ariaLabel="Push play for soothing nature sounds" />
           </li>
         </ul>
       </div>
