@@ -1,0 +1,35 @@
+.diamondContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 7px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.icon {
+    position: relative;
+    background-color: #3498db5d;
+    margin: 0 3.5px;
+    /* transition: transform 0.3s ease; */
+}
+
+.row:nth-child(1) {
+    grid-row: 1;
+}
+
+.row:nth-child(2) {
+    grid-row: 2;
+}
+
+.row:nth-child(3) {
+    grid-row: 3;
+}
+
+/* .icon:hover,
+.icon:focus {
+    transform: scale(3);
+    Adjust the scaling factor as needed
+} */

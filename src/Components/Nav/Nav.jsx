@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import SoundPlayer from "../SoundPlayer/SoundPlayer";
-import { cricketSong } from "../../Config/audioSources";
+// import SoundPlayer from "../SoundPlayer/SoundPlayer";
+// import { cricketSong } from "../../Config/audioSources";
 import Svg from "../Svg/Svg";
 import styles from "./Nav.module.css";
 import Stars from "../Stars/Stars";
@@ -34,7 +34,7 @@ const Nav = () => {
             </Link>
           </li>
           <li>
-            <SoundPlayer sources={cricketSong} ariaLabel="Push play for soothing nature sounds" />
+            {/* <SoundPlayer sources={cricketSong} ariaLabel="Push play for soothing nature sounds" /> */}
           </li>
         </ul>
       </div>
