@@ -5,6 +5,7 @@
 .starsWrapper {
     pointer-events: none;
     overflow: hidden;
+    /* width: 100vw; */
 }
 
 .stars {

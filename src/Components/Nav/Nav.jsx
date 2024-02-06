@@ -3,16 +3,18 @@ import { Link } from "react-router-dom";
 
 // import SoundPlayer from "../SoundPlayer/SoundPlayer";
 // import { cricketSong } from "../../Config/audioSources";
-import Svg from "../Svg/Svg";
+// import Svg from "../Svg/Svg";
+
 import styles from "./Nav.module.css";
 import Stars from "../Stars/Stars";
-
+import Diamond from "../Diamond/Diamond.jsx"
 const Nav = () => {
   return (
     <div className={styles.navWrapper}>
       <Stars />
-      <div className={styles.navContainer}>
-        <ul className={styles.navList}>
+     
+       <div className={styles.navContainer}> <Diamond/>
+       {/* <ul className={styles.navList}>
           <li className={styles.navItem}>
             <Link to={"/contact"}>
               <Svg symbolId='paperplane' className={styles.linkSvg} height='2.5em' width='2.5em'></Svg>
@@ -34,10 +36,10 @@ const Nav = () => {
             </Link>
           </li>
           <li>
-            {/* <SoundPlayer sources={cricketSong} ariaLabel="Push play for soothing nature sounds" /> */}
+            {<SoundPlayer sources={cricketSong} ariaLabel="Push play for soothing nature sounds" />}
           </li>
-        </ul>
-      </div>
+        </ul>*/}
+      </div> 
     </div>
   )
 };
