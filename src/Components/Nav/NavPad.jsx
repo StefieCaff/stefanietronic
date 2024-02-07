@@ -1,19 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 
 // import SoundPlayer from "../SoundPlayer/SoundPlayer";
 // import { cricketSong } from "../../Config/audioSources";
 // import Svg from "../Svg/Svg";
 
-import styles from "./Nav.module.css";
-import Stars from "../Stars/Stars";
+import styles from "./NavPad.module.css";
+import Stars from "../Stars/Stars.jsx";
 import Diamond from "../Diamond/Diamond.jsx"
-const Nav = () => {
+const NavPad  = () => {
   return (
     <div className={styles.navWrapper}>
       <Stars />
      
-       <div className={styles.navContainer}> <Diamond/>
+      <div className={styles.navContainer}>
+        <Diamond />
        {/* <ul className={styles.navList}>
           <li className={styles.navItem}>
             <Link to={"/contact"}>
@@ -44,4 +45,4 @@ const Nav = () => {
   )
 };
 
-export default Nav;
+export default NavPad;

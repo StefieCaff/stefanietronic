@@ -1,25 +1,24 @@
 // external
-import { Routes, Route } from 'react-router-dom';
-import { lazy, Suspense } from 'react';
+import { Routes, Route } from "react-router-dom";
+import { lazy, Suspense } from "react";
 
 //internal
-import './App.css';
-import Spinner from './Components/Spinner';
+import "./App.css";
+import Spinner from "./Components/Spinner";
 
-import Error from './Pages/Error';
-import Nav from './Components/Nav/Nav';
+import Error from "./Pages/Error";
+import NavPad from "./Components/Nav/NavPad";
 
-const Home = lazy(() => import('./Pages/Home'))
-const Portfolio = lazy(() => import('./Pages/Portfolio'));
+const Home = lazy(() => import("./Pages/Home"));
+const Portfolio = lazy(() => import("./Pages/Portfolio"));
 const Experience = lazy(() => import("./Pages/Experience"));
 const Contact = lazy(() => import("./Pages/Contact"));
-
-
+const StickyNote = lazy(() => import("./Pages/StickyNote"));
 function App() {
   return (
     <>
       <Suspense fallback={<Spinner />}>
-        <Nav />
+        <NavPad />
       </Suspense>
       <Routes>
         <Route
@@ -51,6 +50,14 @@ function App() {
           element={
             <Suspense fallback={<Spinner />}>
               <Contact />
+            </Suspense>
+          }
+        />
+        <Route
+          path='/sticky-note'
+          element={
+            <Suspense fallback={<Spinner />}>
+             <StickyNote />
             </Suspense>
           }
         />

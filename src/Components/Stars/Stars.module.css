@@ -3,9 +3,10 @@
 }
 
 .starsWrapper {
+    /* display: flex; */
+    /* width: 100% vw; */
     pointer-events: none;
-    overflow: hidden;
-    /* width: 100vw; */
+    /* overflow: hidden; */
 }
 
 .stars {

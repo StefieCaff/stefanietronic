@@ -1,16 +1,28 @@
 import React from 'react';
 import styles from './Airplane.module.css';
 import Svg from '../Svg/Svg';
+import { Link, useNavigate} from 'react-router-dom';
 
 function Airplane() {
+
+   const navigate = useNavigate();
+
+  const handleClick = () => {
+  console.log("Link clicked0");
+    // Navigate to the sticky note page with the desired state console.log("Link clicked0");
+   navigate('/sticky-note', { state: { accessedByLink: true } });
+  console.log("Link clicked1");
+  };
+  console.log("navigate state:", navigate.state); 
+  
     return (
       <>
     <section id={styles['plane-js']} className={styles['plane-css']}>
       <div className={styles.frame}>
         <div className={styles['plane-container']}>
-          <a href="http://customer.io/" target="_blank" rel="noopener noreferrer">
+          <Link to="/sticky-note" onClick={handleClick}>
             <Svg symbolId="airplane" className={styles.plane}/>
-          </a>
+          </Link>
         </div>
       </div>
     </section>
