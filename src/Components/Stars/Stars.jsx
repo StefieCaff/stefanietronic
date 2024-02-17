@@ -14,7 +14,7 @@ const Stars = () => {
   };
 
   return (
-    <div className={styles.starsWrapper}>
+    <>
       {/* Stars */}
       {[1, 2, 3].map((index) => (
         <svg key={index} className={styles.stars}>
@@ -40,7 +40,7 @@ const Stars = () => {
           <ellipse className={`${styles.comet} ${styles.cometC}`} fill="url(#comet-gradient)" cx="40%" cy="100%" rx="150" ry="2" />
         </g>
       </svg>
-    </div>
+    </>
   );
 };
 

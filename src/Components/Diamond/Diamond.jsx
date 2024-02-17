@@ -29,7 +29,7 @@ const Diamond = () => {
           <SoundPlayer sources={cricketSong} ariaLabel="Push play for soothing nature sounds" />
         </div>
       </div>
-    </div>
+      </div>
   );
 };
 
@@ -52,3 +52,30 @@ export default Diamond;
 //     </div>
 //   );
 // };
+
+
+//<ul className={styles.navList}>
+//          <li className={styles.navItem}>
+ //           <Link to={"/contact"}>
+ //             <Svg symbolId='paperplane' className={styles.linkSvg} height='2.5em' width='2.5em'></Svg>
+//            </Link>
+//          </li>
+//         <li className={styles.navItem}>
+ //           <Link to={"/experience"} >
+ //             <Svg symbolId='tree' className={styles.linkSvg} height='2.5em' width='2.5em' />
+ //           </Link>
+ //         </li>
+ //         <li className={styles.navItem}>
+ //           <Link to={"/portfolio"} >
+ //             <Svg symbolId='nippers' className={styles.linkSvg} height='2.5em' width='2.5em' />
+ //           </Link>
+        //   </li>
+        //   <li className={styles.navItem}>
+        //     <Link to={"/"} >
+        //       <Svg symbolId='snailshell' className={styles.linkSvg} height='2.5em' width='2.5em' />
+        //     </Link>
+        //   </li>
+        //   <li>
+        //     {<SoundPlayer sources={cricketSong} ariaLabel="Push play for soothing nature sounds" />}
+        //   </li>
+        // </ul>

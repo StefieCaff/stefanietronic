@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const Container = ({ children }) => {
   return (
-    <div style={{ padding: '0 20px', margin: '0 auto', maxWidth: '1200px' }}>
+    <div style={{ padding: '0 auto', margin: '0 auto' }}>
       {children}
     </div>
   );
@@ -11,8 +11,9 @@ const Container = ({ children }) => {
 
 const Section = ({ children, topSpacing, bottomSpacing }) => {
   const sectionStyle = {
-    paddingTop: topSpacing || 20,
-    paddingBottom: bottomSpacing || 20,
+    paddingTop: topSpacing !== undefined ? topSpacing : 20,
+    paddingBottom: bottomSpacing !== undefined ? bottomSpacing : 20,
+    minWidth: 'auto'
   };
 
   return <div style={sectionStyle}>{children}</div>;

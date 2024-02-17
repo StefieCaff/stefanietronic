@@ -12,7 +12,7 @@ const SoundPlayer = ({ sources, ariaLabel, className }) => {
       </div>
       <div className={styles.sound}>
         {sources && sources.length > 0 && (
-          <audio controls loop aria-label={ariaLabel} className={className}>
+          <audio controls loop aria-label={ariaLabel} className={styles.audio}>
             {sources.map((source, index) => (
               <source key={index} src={source.src} type={source.type} />
             ))}

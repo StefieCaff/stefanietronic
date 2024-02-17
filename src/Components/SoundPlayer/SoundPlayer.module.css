@@ -33,11 +33,15 @@
     opacity: .9;
 }
 
+.audio{
+    max-width: 250px;
+}
+
 .sound,
 .figure:focus-within .sound {
     position: absolute;
-        top: 0;
-        left: 0;
+    top: 0;
+    left: 0;
     /* margin: 10px 15px; */
     color: rgba(60, 59, 59, 0.568);
     font-weight: 600;
@@ -58,4 +62,11 @@
 .figure:hover .sound,
 .figure:focus-within .sound {
     opacity: 1;
+}
+
+@media screen and (max-width: 310px) {
+    .audio {
+        max-width: 100px;
+        /* Align the diamond to the left when screen width is 550px or smaller */
+    }
 }

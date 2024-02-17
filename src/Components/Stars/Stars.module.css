@@ -10,10 +10,17 @@
 }
 
 .stars {
-    position: fixed;
+    position: absolute;
     width: 100vw;
     height: auto;
     animation: twinkle var(--twinkle-duration) ease-in-out infinite;
+}
+
+.extras {
+    position: absolute;
+    /* Positioning for shooting comets */
+    width: 100%;
+    height: 25%;
 }
 
 .stars:nth-child(2) {
