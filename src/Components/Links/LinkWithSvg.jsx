@@ -6,11 +6,13 @@ import styles from './linkWithSvg.module.css';
 
 const LinkWithSvg = ({ to, symbolId, text}) => {
   return (
-    <Link to={to} className={styles.linkContainer}>
+    <Link to={to} className={styles.linkContainer} activeClassName={styles.active}>
       <div className={styles.contentContainer}>
-        <Svg symbolId={symbolId} className={styles.svg} />
-        <p className={styles.text}>{text}</p>
+        <div className={styles.iconContainer}>
+          <Svg symbolId={symbolId} className={styles.svg} />
+        </div>
       </div>
+      <p className={styles.text}>{text}</p>
     </Link>
   );
 };

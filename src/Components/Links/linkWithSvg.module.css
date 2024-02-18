@@ -6,8 +6,15 @@
 
 .contentContainer {
     overflow: hidden;
-    width: max-content;
-    height: max-content;
+    opacity: .8;
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    margin: 5px 0 0 6px;
+}
+
+.iconContainer{
+    padding: 18px; /* changes the size of the icon*/
 }
 
 .svg {
@@ -21,16 +28,18 @@
 
 .text {
     position: absolute;
+    color: rgb(252, 252, 252);
     font-size: 7px;
+    font-weight: extra light;
     z-index:0;
-    top: 5;
-    right: 0;
+    bottom: 0;
+    left: 0;
     opacity: 0;
     display: flex;
-    text-transform: center;
     justify-content: center;
     align-items: center;
-    transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease, z-index;
+    transition: opacity 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease, z-index;
+    margin: 18px;
 }
 
 .linkContainer:hover .svg,
@@ -44,6 +53,20 @@
 .linkContainer:focus .text {
     opacity: 1;
     transform: scale(3);
-    background-color: yellow;
+    text-shadow:
+        -0.6px -0.6px .8px rgba(0, 0, 0, 0.444),
+            0.6px -0.6px .8px rgba(0, 0, 0, 0.444),
+            -0.6px 0.6px .8px rgba(0, 0, 0, 0.444),
+            0.6px 0.6px .8px rgba(0, 0, 0, 0.444);
     z-index: 1;
+}
+
+.active .text {
+    opacity: 0;
+}
+
+.active .iconContainer {
+    /* Adjust the icon size as needed */
+    padding: 10px;
+    /* Example padding */
 }
