@@ -1,72 +1,56 @@
 /* LinkWithSvg.module.css */
 .linkContainer {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
 }
-
 .contentContainer {
-    overflow: hidden;
-    opacity: .8;
-    width: fit-content;
-    height: fit-content;
     position: relative;
-    margin: 5px 0 0 6px;
 }
-
 .iconContainer{
-    padding: 18px; /* changes the size of the icon*/
+    position: relative;
+    padding: 20px; /* changes the size and position of the icon*/
 }
-
 .svg {
-    transition: opacity 0.3s ease;
+    opacity: .7;
     position: absolute;
+    transition: opacity 0.3s ease;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    display: flex;
 }
-
+.textContainer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 .text {
     position: absolute;
     color: rgb(252, 252, 252);
-    font-size: 7px;
-    font-weight: extra light;
-    z-index:0;
-    bottom: 0;
-    left: 0;
+    font-size: 6px;
+    z-index: 0;
     opacity: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%; 
+    height: 100%;
     transition: opacity 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease, z-index;
-    margin: 18px;
 }
 
-.linkContainer:hover .svg,
-.linkContainer:focus .svg,
-.linkContainer:hover .text,
-.linkContainer:focus .text {
-    opacity: 0;
-}
-
-.linkContainer:hover .text,
-.linkContainer:focus .text {
+.text:hover,
+.text:focus {
     opacity: 1;
-    transform: scale(3);
+    transform: scale(2.3);
     text-shadow:
-        -0.6px -0.6px .8px rgba(0, 0, 0, 0.444),
-            0.6px -0.6px .8px rgba(0, 0, 0, 0.444),
-            -0.6px 0.6px .8px rgba(0, 0, 0, 0.444),
-            0.6px 0.6px .8px rgba(0, 0, 0, 0.444);
-    z-index: 1;
-}
-
-.active .text {
-    opacity: 0;
-}
-
-.active .iconContainer {
-    /* Adjust the icon size as needed */
-    padding: 10px;
-    /* Example padding */
+    -0.6px -0.6px .8px rgba(0, 0, 0, 0.444),
+    0.6px -0.6px .8px rgba(0, 0, 0, 0.444),
+    -0.6px 0.6px .8px rgba(0, 0, 0, 0.444),
+    0.6px 0.6px .8px rgba(0, 0, 0, 0.444);
+    z-index: 0;
 }

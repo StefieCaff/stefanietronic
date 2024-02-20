@@ -8,13 +8,9 @@ function Airplane() {
    const navigate = useNavigate();
 
   const handleClick = () => {
-  console.log("Link clicked0");
     // Navigate to the sticky note page with the desired state console.log("Link clicked0");
    navigate('/sticky-note', { state: { accessedByLink: true } });
-  console.log("Link clicked1");
   };
-  console.log("navigate state:", navigate.state); 
-  
     return (
       <>
     <section id={styles['plane-js']} className={styles['plane-css']}>

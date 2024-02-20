@@ -6,12 +6,13 @@ import { cricketSong } from "../../Config/audioSources";
 import styles from './diamond.module.css';
 
 const Diamond = () => {
-  const iconSize = (size = '3em') => size;
+  const iconSize = (size = '2.8em') => size;
   return (
     <div className={styles.diamondContainer}>
       <div className={styles.row}>
         <div className={styles.icon} style={{ width: iconSize(), height: iconSize() }}>
-          <LinkWithSvg to="/" symbolId="snailshell" text="home" /></div>
+          <LinkWithSvg to="/" symbolId="snailshell" text="home"></LinkWithSvg>
+        </div>
       </div>
       <div className={styles.row}>
         <div className={styles.icon} style={{ width: iconSize(), height: iconSize() }}>

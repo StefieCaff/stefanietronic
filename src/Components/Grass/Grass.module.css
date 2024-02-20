@@ -1,0 +1,48 @@
+/* Grass.module.css */
+.grassContainer {
+    position: relative;
+    width: 1200px;
+    /* Adjust as needed */
+    height: 200px;
+    /* Adjust as needed */
+    margin: 0 auto;
+}
+
+.blade {
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 55px solid;
+    position: absolute;
+    bottom: 0;
+    -webkit-animation: bladeMove 5s infinite;
+    animation: bladeMove 5s infinite;
+}
+
+/* Adjust colors for front and back rows as needed */
+.blade1 {
+    left: 0;
+    border-bottom-color: #156A32;
+}
+
+/* Add styles for other blades... */
+
+/* Animation */
+@keyframes bladeMove {
+
+    0%,
+    100% {
+        border-left: 10px solid transparent;
+        border-right: 25px solid transparent;
+    }
+
+    25%,
+    75% {
+        border-left: 25px solid transparent;
+        border-right: 10px solid transparent;
+    }
+
+    50% {
+        border-left: 10px solid transparent;
+        border-right: 25px solid transparent;
+    }
+}
