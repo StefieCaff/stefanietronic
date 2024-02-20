@@ -1,32 +1,50 @@
 /* Grass.module.css */
+
 .grassContainer {
-    position: relative;
-    width: 1200px;
-    /* Adjust as needed */
-    height: 200px;
-    /* Adjust as needed */
-    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100vw;
+    /* height: auto; */
+}
+
+.row {
+    display: flex;
+    margin-bottom: -305px;
+    /* Adjust this value as needed for the overlapping effect */
+}
+
+.frontRow {
+    z-index: 1;
+    /* Ensure front row is on top */
+}
+
+.backRow {
+    z-index: 0;
+    /* Ensure back row is below front row */
 }
 
 .blade {
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
-    border-bottom: 55px solid;
-    position: absolute;
-    bottom: 0;
-    -webkit-animation: bladeMove 5s infinite;
-    animation: bladeMove 5s infinite;
+    border-bottom: 55px solid #156A32;
+    width: 100%;
+    /* height: auto; */
+    /* Blade width takes full width of container */
+    margin-right: 1px;
+    /* Add a small gap between blades */
+    animation: bladeMove 7s infinite;
+    /* Adjust animation duration for back row */
+    /* Apply animation to each blade */
 }
 
-/* Adjust colors for front and back rows as needed */
-.blade1 {
-    left: 0;
-    border-bottom-color: #156A32;
+.backBlade {
+    border-bottom-color: #1E4018;
+    /* height: auto; */
+    /* Change the color of the back row */
 }
 
-/* Add styles for other blades... */
-
-/* Animation */
 @keyframes bladeMove {
 
     0%,
