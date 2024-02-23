@@ -1,5 +1,5 @@
 // Grass.jsx
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './Grass.module.css';
 
 function getRandomInt(min, max) {
@@ -7,31 +7,58 @@ function getRandomInt(min, max) {
 }
 
 const Grass = () => {
+  const [bladesPerRow, setBladesPerRow] = useState(0);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const containerWidth = window.innerWidth;
+      const bladeWidth = 35; // Adjust this value as needed
+      const newBladesPerRow = Math.floor(containerWidth / bladeWidth);
+      setBladesPerRow(newBladesPerRow);
+    };
+
+    // Initial calculation
+    handleResize();
+
+    // Event listener for window resize
+    window.addEventListener('resize', handleResize);
+
+    // Clean up event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  // Conditional rendering to prevent rendering when bladesPerRow is 0
+  if (bladesPerRow === 0) {
+    return null;
+  }
+
   return (
     <div className={styles.grassContainer}>
       {/* Front Row */}
-      <div className={`${styles.row} ${styles.frontRow}`}>
-        {Array.from({ length: 45 }, (_, index) => (
+      <div className={`${styles.row}`}>
+        {Array.from({ length: bladesPerRow }, (_, index) => (
           <div
             key={`front-${index}`}
             className={styles.blade}
             style={{
-              height: getRandomInt(40, 35), // Random height between 30px and 70px
-              marginRight: getRandomInt(1, 2), // Random margin between 1px and 2px
+              borderBottomWidth: `${getRandomInt(25, 70)}px`,
+              marginRight: `${getRandomInt(0, 2)}px`,
             }}
           />
         ))}
       </div>
       {/* Back Row */}
       <div className={`${styles.row} ${styles.backRow}`}>
-        {Array.from({ length: 200 }, (_, index) => (
+        {Array.from({ length: bladesPerRow }, (_, index) => (
           <div
             key={`back-${index}`}
-            className={`${styles.blade} ${styles.backBlade}`} // Add back-blade class
+            className={`${styles.blade} ${styles.backBlade}`}
             style={{
-              height: getRandomInt(25, 35), // Random height between 25px and 35px
-              marginRight: getRandomInt(2, 3), // Random margin between 2px and 3px
-              animationDuration: '10s', // Adjust animation duration for back row
+              borderBottomWidth: `${getRandomInt(25, 75)}px`,
+              marginRight: `${getRandomInt(0, 5)}px`,
+              animationDuration: '10s',
             }}
           />
         ))}

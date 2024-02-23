@@ -5,44 +5,28 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-end;
-    width: 100vw;
-    /* height: auto; */
+    width: 100%;
+    overflow-x: clip;
+    /* Change overflow-x to clip */
 }
 
 .row {
     display: flex;
-    margin-bottom: -305px;
-    /* Adjust this value as needed for the overlapping effect */
-}
-
-.frontRow {
-    z-index: 1;
-    /* Ensure front row is on top */
-}
-
-.backRow {
-    z-index: 0;
-    /* Ensure back row is below front row */
+    margin-bottom: -200px;
+    /* Adjust this value as needed */
 }
 
 .blade {
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
-    border-bottom: 55px solid #156A32;
-    width: 100%;
-    /* height: auto; */
-    /* Blade width takes full width of container */
-    margin-right: 1px;
-    /* Add a small gap between blades */
+    border-bottom: 55px solid #1E4018;
+    margin-right: calc(0.5px / var(--blades-per-row));
+    /* Adjust margin calculation */
     animation: bladeMove 7s infinite;
-    /* Adjust animation duration for back row */
-    /* Apply animation to each blade */
 }
 
 .backBlade {
-    border-bottom-color: #1E4018;
-    /* height: auto; */
-    /* Change the color of the back row */
+    border-bottom-color: #156A32;
 }
 
 @keyframes bladeMove {
