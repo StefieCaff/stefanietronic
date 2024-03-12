@@ -5,10 +5,10 @@ import { lazy, Suspense } from "react";
 //internal
 import "../../src/App.css";
 import Spinner from "../Components/Spinner";
-
+import Home from "../Pages/Home"
 import Error from "../Pages/Error";
 
-const Home = lazy(() => import("../Pages/Home"));
+// const Home = lazy(() => import("../Pages/Home"));
 const Portfolio = lazy(() => import("../Pages/Portfolio"));
 const Experience = lazy(() => import("../Pages/Experience"));
 const Contact = lazy(() => import("../Pages/Contact"));
@@ -20,9 +20,7 @@ const Router =() => {
         <Route
           path='/'
           element={
-            <Suspense fallback={<Spinner />}>
-              <Home />
-            </Suspense>
+            <Home />
           }
         />
         <Route

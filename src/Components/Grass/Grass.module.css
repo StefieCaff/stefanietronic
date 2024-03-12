@@ -1,5 +1,3 @@
-/* Grass.module.css */
-
 .grassContainer {
     display: flex;
     flex-wrap: wrap;
@@ -7,44 +5,66 @@
     align-items: flex-end;
     width: 100%;
     overflow-x: clip;
-    /* Change overflow-x to clip */
+    margin-top: 100px;
 }
 
 .row {
     display: flex;
-    margin-bottom: -200px;
-    /* Adjust this value as needed */
+    margin-bottom: -100px;
 }
+
+@keyframes waveAnimationFront {
+    0% {
+        transform: rotateZ(-2deg);
+    }
+
+    50% {
+        transform: rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateZ(-2deg);
+    }
+}
+
+@keyframes waveAnimationBack {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    50% {
+        transform: rotateZ(2deg);
+    }
+
+    100% {
+        transform: rotateZ(0deg);
+    }
+}
+
+/* @keyframes waveAnimation {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    50% {
+        transform: rotateZ(-5deg);
+    }
+
+    100% {
+        transform: rotateZ(0deg);
+    }
+} */
 
 .blade {
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     border-bottom: 55px solid #1E4018;
-    margin-right: calc(0.5px / var(--blades-per-row));
-    /* Adjust margin calculation */
-    animation: bladeMove 7s infinite;
+    /* border-bottom: 55px solid #0944abd1; */
+    animation: waveAnimationFront 5s infinite alternate;
 }
 
 .backBlade {
     border-bottom-color: #156A32;
-}
-
-@keyframes bladeMove {
-
-    0%,
-    100% {
-        border-left: 10px solid transparent;
-        border-right: 25px solid transparent;
-    }
-
-    25%,
-    75% {
-        border-left: 25px solid transparent;
-        border-right: 10px solid transparent;
-    }
-
-    50% {
-        border-left: 10px solid transparent;
-        border-right: 25px solid transparent;
-    }
+    /* border-bottom-color: #15ad93c7; */
+    animation: waveAnimationBack 4s infinite alternate;
 }

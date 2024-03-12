@@ -1,0 +1,69 @@
+.tabContainer {
+    position: fixed;
+    width: 70px;
+    height: 150px;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    margin-bottom: 50px;
+}
+
+.coverContainer {
+    position: absolute;
+    z-index: 10;
+}
+
+.snailContainer {
+    position: absolute;
+    z-index: 9;
+    transition: transform 65s linear;
+}
+
+.cover {
+    width: 60px;
+    height: auto;
+}
+
+.snail {
+    width: 55px;
+    height: auto;
+    opacity: 0.9;
+    animation: wiggle 5s ease-in-out infinite;
+}
+
+.tabContainer:hover .snailContainer,
+.tabContainer:focus .snailContainer {
+    transform: translateY(-100vh);
+}
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(-2deg);
+        /* Rotate slightly counter-clockwise */
+    }
+
+    20% {
+        transform: rotate(5deg);
+        /* Rotate slightly clockwise */
+    }
+
+    40% {
+        transform: rotate(-5deg);
+        /* Rotate slightly counter-clockwise */
+    }
+
+    60% {
+        transform: rotate(-3deg);
+        /* Rotate slightly clockwise */
+    }
+
+    80% {
+        transform: rotate(2deg);
+        /* Rotate slightly counter-clockwise */
+    }
+
+    100% {
+        transform: rotate(-5deg);
+        /* Return to original rotation */
+    }
+}

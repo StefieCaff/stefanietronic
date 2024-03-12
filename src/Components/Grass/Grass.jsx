@@ -1,5 +1,7 @@
 // Grass.jsx
 import React, { useEffect, useState } from 'react';
+
+import { debounce } from '../../Utils/utils';
 import styles from './Grass.module.css';
 
 function getRandomInt(min, max) {
@@ -10,12 +12,12 @@ const Grass = () => {
   const [bladesPerRow, setBladesPerRow] = useState(0);
 
   useEffect(() => {
-    const handleResize = () => {
+    const handleResize = debounce(() => {
       const containerWidth = window.innerWidth;
-      const bladeWidth = 35; // Adjust this value as needed
+      const bladeWidth = 18; // Adjust this value as needed
       const newBladesPerRow = Math.floor(containerWidth / bladeWidth);
       setBladesPerRow(newBladesPerRow);
-    };
+    }, 200);
 
     // Initial calculation
     handleResize();
@@ -43,8 +45,7 @@ const Grass = () => {
             key={`front-${index}`}
             className={styles.blade}
             style={{
-              borderBottomWidth: `${getRandomInt(25, 70)}px`,
-              marginRight: `${getRandomInt(0, 2)}px`,
+              borderBottomWidth: `${getRandomInt(50, 100)}px`,
             }}
           />
         ))}
@@ -56,9 +57,8 @@ const Grass = () => {
             key={`back-${index}`}
             className={`${styles.blade} ${styles.backBlade}`}
             style={{
-              borderBottomWidth: `${getRandomInt(25, 75)}px`,
+              borderBottomWidth: `${getRandomInt(45, 85)}px`,
               marginRight: `${getRandomInt(0, 5)}px`,
-              animationDuration: '10s',
             }}
           />
         ))}

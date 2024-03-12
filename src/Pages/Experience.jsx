@@ -1,11 +1,14 @@
 import React from 'react';
-import Grass from '../Components/Grass/Grass';
+
+import Footer from '../Components/Footer/Footer';
+import Snail from '../Components/Snail/Snail';
 
 const Experience = () => {
     return (
         <>
             <p>Experience Page</p>
-            <Grass/>
+            <Snail/>
+            <Footer/>
         </>
 
     )
