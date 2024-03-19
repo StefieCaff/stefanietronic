@@ -1,0 +1,117 @@
+.clouds {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+}
+
+.cloud {
+    /* Adjust top, width, and margin properties as needed */
+    top: 20%;
+    width: 300px;
+    margin-right: 20px;
+    opacity: 1;
+}
+
+.cloud.front {
+    z-index: 9;
+}
+
+.cloud.distant {
+    z-index: 1;
+}
+
+.cloud.background {
+    z-index: 1;
+}
+
+/*
+Cloud Sizing
+*/
+.cloud.smaller {
+    width: 100px;
+    margin-top: 50px;
+    margin-right: 20px;
+}
+
+.cloud.small {
+    width: 150px;
+    margin-right: 20px;
+}
+
+.cloud.big {
+    width: 500px;
+    margin-top: 50px;
+    margin-right: 20px;
+}
+
+.cloud.massive {
+    width: 600px;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+/*
+Cloud: Animation - Speed 1
+*/
+.cloudSpeed1 {
+    animation: cloud-movement 8s infinite linear forwards;
+}
+
+.slowSpeed1 {
+    animation-duration: 9.2s;
+}
+
+.slowerSpeed1 {
+    animation-duration: 11.2s;
+}
+
+.slowestSpeed1 {
+    animation-duration: 13.5s;
+}
+
+.superSlowSpeed1 {
+    animation-duration: 20.5s;
+}
+
+/*
+Cloud: Animation - Speed 2 (Slower)
+*/
+.cloudSpeed2 {
+    animation: cloud-movement 4s infinite linear forwards;
+}
+
+.slowSpeed2 {
+    animation-duration: 40.3s;
+}
+
+.slowerSpeed2 {
+    animation-duration: 45.8s;
+}
+
+.slowestSpeed2 {
+    animation-duration: 60.3s;
+}
+
+.superSlowSpeed2 {
+    animation-duration: 55.8s;
+}
+
+@keyframes cloud-movement {
+    0% {
+        opacity: 0.1;
+        transform: translateX(20px);
+    }
+
+    10% {
+        opacity: 0.7;
+    }
+
+    90% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(-1000px);
+    }
+}

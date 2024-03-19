@@ -1,36 +1,73 @@
-import React from 'react';
+import { useState, useRef } from 'react';
 import Svg from '../Components/Svg/Svg';
-import QRCode from 'react-qr-code';
+import styles from './Contact.module.css';
+import { Container, Section } from '../Components/Containers/Containers';
+import Clouds from '../Components/Clouds/Clouds';
 
 const Contact = () => {
-    const email = 'stefiecaff@gmail.com';
-     const instagramProfileUrl = 'https://www.instagram.com/stefaju/?igsh=MXhtY2U2czYyb3Y0Yg%3D%3D&utm_source=qr';
+    const email = process.env.REACT_APP_EMAIL;
+    const githubProfileUrl = process.env.REACT_APP_GITHUB_PROFILE;
+    const linkedinProfileUrl = process.env.REACT_APP_LINKEDIN_PROFILE;
+    const [animationState, setAnimationState] = useState('plane1');
+    const svgRef = useRef(null);
+
+    const handleAnimationEnd = () => {
+        setAnimationState('plane2');
+    };
+
+    const resetAnimation = () => {
+        setAnimationState('plane1');
+        // Trigger reflow to restart animation
+        void svgRef.current.offsetWidth;
+    };
+
+    const handleKeyDown = (event) => {
+        if (event.key === 'Enter') {
+            resetAnimation();
+        }
+    };
+
     return (
-        <div>
-            <h2>Reach out via email:</h2>
-            <a href={`mailto:${email}`}>Email Stefie</a>
-            <p>Alternatively, connect with me on social media platforms by clicking the icon below:</p>
-            <ul>
-                <li>
-                    <a href="https://github.com/StefieCaff" target="_blank" rel="noopener noreferrer">
-                        <Svg symbolId="github" />
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/stefanie-caffarel-888209113" target="_blank" rel="noopener noreferrer">
-                        <Svg symbolId="linkedin" />
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.instagram.com/stefaju/?igsh=MXhtY2U2czYyb3Y0Yg%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
-                        <Svg symbolId="instagram" />
-                        <QRCode value={instagramProfileUrl} />
-                    </a>
-                </li>
-                <li></li>
-            </ul>
-        </div>
-    )
+        <Section>
+            <Container>
+                <h2>Get in Touch directly by email, or check out my GitHub and LinkedIn profiles.</h2>
+                <div className={styles.contactOptions}>
+                  <div className={styles.emailOption}>
+                        <a href={`mailto:${email}`} aria-label="Email Stefie">Email Stefie</a>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>
+                            <a href={githubProfileUrl} target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+                                <Svg symbolId="github" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href={linkedinProfileUrl} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+                                    <Svg symbolId="linkedin" />
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <Clouds/>
+                <div className={styles[animationState]} onAnimationEnd={handleAnimationEnd}>
+                    <Svg symbolId={animationState === 'plane1' ? 'planetop' : 'planefront'} />
+                </div>
+                <div
+                    className={styles.animationReset}
+                    tabIndex="0"
+                    onClick={resetAnimation}
+                    onKeyDown={handleKeyDown}
+                    ref={svgRef}
+                    aria-label="Reset animation"
+                    role="button"
+                >
+                    <Svg symbolId="planebutton" className={styles.resetButton} />
+                </div>
+            </Container>
+        </Section>
+    );
 };
 
 export default Contact;

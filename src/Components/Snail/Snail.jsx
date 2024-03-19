@@ -1,5 +1,3 @@
-// Snail.jsx
-import React from 'react';
 import styles from './Snail.module.css';
 import Svg from '../Svg/Svg';
 

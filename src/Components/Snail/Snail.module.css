@@ -1,11 +1,11 @@
 .tabContainer {
     position: fixed;
     width: 70px;
-    height: 150px;
+    height: auto;
     bottom: 0;
     right: 0;
     z-index: 10;
-    margin-bottom: 50px;
+    margin-bottom: 160px;
 }
 
 .coverContainer {
@@ -15,18 +15,19 @@
 
 .snailContainer {
     position: absolute;
+    height: 1px;
     z-index: 9;
     transition: transform 65s linear;
 }
 
 .cover {
-    width: 60px;
-    height: auto;
+    width: 65px;
+    height: 70px;
 }
 
 .snail {
     width: 55px;
-    height: auto;
+    height: 55px;
     opacity: 0.9;
     animation: wiggle 5s ease-in-out infinite;
 }
