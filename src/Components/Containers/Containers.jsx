@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import styles from './Containers.module.css'; 
 const Container = ({ children }) => {
   return (
     <div style={{ padding: '0 auto', margin: '0 auto' }}>
@@ -32,40 +32,44 @@ const FlexHeader = ({ children }) => {
 };
 
 const ImageGallery = ({ images }) => {
-  
-  const galleryStyle = {
-    margin: '20px',
-    padding: '20px 0',
+  // Style constants
+  const gallery = {
+    margin: '0 auto', // Auto margin to center the gallery
     display: 'flex',
     flexWrap: 'wrap',
-    gap: '20px',
+    gap: '10px',
+    justifyContent: 'center', // Center the items horizontally
   };
-  const imageContainerStyle = {
-    flex: 1,
-  };
-  const imageStyle = {
+
+  const img = {
     width: '100%',
     height: 'auto',
     borderRadius: '8px',
   };
-  const captionStyle = {
-  textAlign: 'center',
-  marginTop: '8px',
-  fontSize: '14px',
-  color: '#555',
+
+  const caption = {
+    textAlign: 'center',
+    marginTop: '8px',
+    fontSize: '14px',
+    color: '#555',
   };
-  
+
   return (
-    <div style={galleryStyle}>
+    <div style={gallery}>
       {images.map((image, index) => (
-        <div key={index} style={imageContainerStyle}>
-          <img src={image.src} alt={image.alt} style={imageStyle} />
-          <p style={captionStyle}>{ image.caption}</p>
+        <div key={index} className={styles.imgContainer}> {/* Use className from CSS module */}
+          <img src={image.src} alt={image.alt} style={img} />
+          <p style={caption}>{image.caption}</p>
         </div>
       ))}
     </div>
-  )
-}
+  );
+};
+
+export default ImageGallery;
+
+
+
 
 Container.propTypes = {
   children: PropTypes.node.isRequired,

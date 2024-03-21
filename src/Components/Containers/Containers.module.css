@@ -1,0 +1,24 @@
+.imgContainer {
+    margin-bottom: 20px;
+}
+
+/* Media query for screens larger than 600px wide */
+@media (max-width: 280px) {
+    .imgContainer {
+        width: 100%;
+    }
+}
+
+@media (min-width:320px) {
+    .imgContainer {
+        width: 48%;
+        /* Adjust as needed */
+    }
+}
+
+@media (min-width: 600px) {
+    .imgContainer {
+        width: 13%;
+        /* Adjust as needed */
+    }
+}
