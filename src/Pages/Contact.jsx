@@ -3,6 +3,7 @@ import Svg from '../Components/Svg/Svg';
 import styles from './Contact.module.css';
 import { Container, Section } from '../Components/Containers/Containers';
 import Clouds from '../Components/Clouds/Clouds';
+import Heading from '../Components/Heading/Heading';
 
 const Contact = () => {
     const email = process.env.REACT_APP_EMAIL;
@@ -26,15 +27,26 @@ const Contact = () => {
             resetAnimation();
         }
     };
+    const heading = 'Greetings! Explore my social media profiles below.'
+    const subHeading = (
+        <>
+           For inquiries about joining your development team, exploring climbing or yoga offerings, or any other queries, feel free to reach out directly:
+        {' '}
+        <a href={`mailto:${email}`} aria-label="Email Stefie">Email Stefie</a>.
+        {' '}
+        Thank you!
+        </>
+    );
+   
 
     return (
         <Section>
             <Container>
-                <h2>Get in Touch directly by email, or check out my GitHub and LinkedIn profiles.</h2>
+                <Heading
+                    heading={heading}
+                    subHeading={subHeading}
+                />
                 <div className={styles.contactOptions}>
-                  <div className={styles.emailOption}>
-                        <a href={`mailto:${email}`} aria-label="Email Stefie">Email Stefie</a>
-                    </div>
                     <div>
                         <ul>
                             <li>

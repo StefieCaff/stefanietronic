@@ -71,3 +71,13 @@ BlinkMacSystemFont,
 'Droid Sans',
 'Helvetica Neue',
 sans-serif; */
+
+/* Error page Styling */
+
+.errorCredit {
+  font-size: 10px;
+}
+
+.errorLink {
+  font-size: 12px;
+}

@@ -1,25 +1,14 @@
 import React from 'react';
 
-const Heading = ({ text }) => {
-    
-      const typewriter = {
-        fontSize: '13px',
-        color: '#333',
-        overflow: 'hidden',
-        whiteSpace: 'nowrap',
-        animation: 'typing-animation 8s steps(60, end)'
-    };
+import styles from './Heading.module.css'
+
+const Heading = ({ heading, subHeading }) => {
 
     return (
-        <h1 style={typewriter}>
-            {text}
-            <style>{
-             `@keyframes typing-animation {
-                  from { width: 0; }
-                  to { width: 100%; }
-                }`
-            }</style>
-        </h1>
+        <div className={styles.headingWrapper}>
+            <h1 className={styles.typewriter}>{heading}</h1>
+            <h3 className={styles.subHeadingStyle}>{subHeading}</h3>
+        </div>
     );
 };
 

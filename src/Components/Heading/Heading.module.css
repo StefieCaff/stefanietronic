@@ -1,0 +1,46 @@
+.headingWrapper {
+    padding: 12px 10px;
+    overflow: hidden;
+}
+
+.subHeadingStyle {
+    font-size: 13px;
+}
+
+.typewriter {
+    font-size: 18px;
+    padding: 18px 0;
+    overflow: hidden;
+    animation: typing-animation 3s steps(60, end);
+    white-space: nowrap;
+}
+
+@keyframes typing-animation {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+/* Media query for screens smaller than 300px */
+@media screen and (max-width: 300px) {
+    .typewriter {
+        font-size: 14px;
+    }
+
+    .headingWrapper {
+        padding: 12px 10px;
+        overflow: hidden;
+    }
+}
+
+@media screen and (mix-width: 301px) {
+
+    .headingWrapper {
+        padding: 12px 20px;
+        overflow: hidden;
+    }
+}
