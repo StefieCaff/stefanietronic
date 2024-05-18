@@ -4,11 +4,11 @@ import styles from './Contact.module.css';
 import { Container, Section } from '../Components/Containers/Containers';
 import Clouds from '../Components/Clouds/Clouds';
 import Heading from '../Components/Heading/Heading';
+import Footer from '../Components/Footer/Footer';
+import Cloud from '../Components/Clouds/Cloud';
 
 const Contact = () => {
     const email = process.env.REACT_APP_EMAIL;
-    const githubProfileUrl = process.env.REACT_APP_GITHUB_PROFILE;
-    const linkedinProfileUrl = process.env.REACT_APP_LINKEDIN_PROFILE;
     const [animationState, setAnimationState] = useState('plane1');
     const svgRef = useRef(null);
 
@@ -30,7 +30,7 @@ const Contact = () => {
     const heading = 'Greetings! Explore my social media profiles below.'
     const subHeading = (
         <>
-           For inquiries about joining your development team, exploring climbing or yoga offerings, or any other queries, feel free to reach out directly:
+           For inquiries about joining your development team, climbing or yoga offerings, or other queries, feel free to reach out directly:
         {' '}
         <a href={`mailto:${email}`} aria-label="Email Stefie">Email Stefie</a>.
         {' '}
@@ -40,29 +40,16 @@ const Contact = () => {
    
 
     return (
+        <>
         <Section>
             <Container>
                 <Heading
                     heading={heading}
                     subHeading={subHeading}
                 />
-                <div className={styles.contactOptions}>
-                    <div>
-                        <ul>
-                            <li>
-                            <a href={githubProfileUrl} target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
-                                <Svg symbolId="github" />
-                                </a>
-                            </li>
-                            <li>
-                                <a href={linkedinProfileUrl} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
-                                    <Svg symbolId="linkedin" />
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <Clouds/>
+                <Section>
+                    <Clouds/>
+                </Section>
                 <div className={styles[animationState]} onAnimationEnd={handleAnimationEnd}>
                     <Svg symbolId={animationState === 'plane1' ? 'planetop' : 'planefront'} />
                 </div>
@@ -74,11 +61,17 @@ const Contact = () => {
                     ref={svgRef}
                     aria-label="Reset animation"
                     role="button"
+                    title="click for Take-off!"
                 >
                     <Svg symbolId="planebutton" className={styles.resetButton} />
                 </div>
             </Container>
-        </Section>
+            </Section>
+            <Footer>
+                <Cloud/>
+            </Footer>
+        
+        </>
     );
 };
 

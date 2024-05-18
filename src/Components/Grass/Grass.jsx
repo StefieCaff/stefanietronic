@@ -1,4 +1,3 @@
-// Grass.jsx
 import React, { useEffect, useState } from 'react';
 
 import { debounce } from '../../Utils/utils';

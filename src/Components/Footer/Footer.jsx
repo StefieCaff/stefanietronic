@@ -1,13 +1,17 @@
 import React from 'react';
-import Grass from '../Grass/Grass'; // Import the Grass component
+import { node } from 'prop-types';
 import styles from './Footer.module.css';
 
-const Footer = () => {
+const Footer = ({ children }) => {
   return (
     <footer className={styles.footer}>
-        <Grass /> {/* Include the Grass component */}
+      {children}
     </footer>
   );
+};
+
+Footer.propTypes = {
+  children: node,
 };
 
 export default Footer;

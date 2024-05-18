@@ -24,11 +24,11 @@ const Clouds = ({ speed }) => {
 
     return (
          <div id={styles['clouds-js']} className={styles.clouds}>
-            <Svg symbolId="cloud1" className={`${cloudClass} ${styles.cloud} ${styles.big} ${styles.front} ${slowestClass}`}/>
-            <Svg symbolId="cloud2" className={`${cloudClass} ${styles.cloud} ${styles.distant} ${styles.smaller} ${slowestClass}`} />
-            <Svg symbolId="cloud3" className={`${cloudClass} ${styles.cloud} ${styles.small} ${slowClass}`} />
-            <Svg symbolId="cloud4" className={`${cloudClass} ${styles.cloud} ${styles.distant} ${styles.massive} ${superSlowClass}`} />
-            <Svg symbolId="cloud5" className={`${cloudClass} ${styles.cloud} ${slowerClass}`} />
+            <Svg symbolId="cloud" className={`${cloudClass} ${styles.cloud} ${styles.big} ${styles.front} ${slowestClass}`}/>
+            <Svg symbolId="cloud" className={`${cloudClass} ${styles.cloud} ${styles.distant} ${styles.smaller} ${slowestClass}`} />
+            <Svg symbolId="cloud" className={`${cloudClass} ${styles.cloud} ${styles.small} ${slowClass}`} />
+            <Svg symbolId="cloud" className={`${cloudClass} ${styles.cloud} ${styles.distant} ${styles.massive} ${superSlowClass}`} />
+            <Svg symbolId="cloud" className={`${cloudClass} ${styles.cloud} ${slowerClass}`} />
         </div>
     );
 };

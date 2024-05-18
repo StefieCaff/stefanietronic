@@ -1,0 +1,19 @@
+.socialLinks {
+    position: absolute;
+    top: 65%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    /* Prevent links from wrapping to a new line */
+}
+
+.socialLinks a {
+    display: inline-block;
+    margin: 15px;
+    /* Reduce margin between links */
+}
+
+.icon {
+    width: 40px;
+    height: auto;
+}

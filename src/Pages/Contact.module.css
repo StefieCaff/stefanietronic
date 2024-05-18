@@ -1,3 +1,4 @@
+/* Existing styles */
 .contactContainer {
     max-width: 600px;
     margin: 0 auto;
@@ -25,18 +26,18 @@
     text-decoration: underline;
 }
 
-.animationReset{
+.animationReset {
     position: fixed;
     width: 70px;
     height: auto;
     bottom: 0;
     right: 0;
     z-index: 10;
-    margin-bottom: 80px;
+    margin-bottom: 90px;
     cursor: pointer;
 }
 
-.resetButton{
+.resetButton {
     width: 65px;
     height: 70px;
 }
@@ -76,16 +77,51 @@
         transform: translate(-50%, -50%) scale(0.05);
         opacity: 1;
     }
+
     20% {
         transform: translate(-50%, -50%) scale(50);
-         opacity: 0;
+        opacity: 0;
     }
+
     30% {
         transform: translate(-50%, -50%) scale(60);
         opacity: 0;
     }
+
     100% {
         transform: translate(-50%, -50%) scale(100);
         opacity: 0;
     }
+}
+
+.cloudContainer {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    max-width: 100%;
+}
+
+.cloudBackground {
+    width: 100%;
+    height: auto;
+}
+
+.socialLinks {
+    position: absolute;
+    top: 65%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    /* Prevent links from wrapping to a new line */
+}
+
+.socialLinks a {
+    display: inline-block;
+    margin: 15px;
+    /* Reduce margin between links */
+}
+
+.icon {
+    width: 40px;
+    height: auto;
 }
