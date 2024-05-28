@@ -1,7 +1,7 @@
 .socialLinks {
     position: absolute;
-    top: 65%;
-    left: 55%;
+    top: 70%;
+    left: 45%;
     transform: translate(-50%, -50%);
     white-space: nowrap;
     /* Prevent links from wrapping to a new line */
@@ -10,10 +10,38 @@
 .socialLinks a {
     display: inline-block;
     margin: 15px;
-    /* Reduce margin between links */
 }
 
 .icon {
-    width: 40px;
+    width: auto;
     height: auto;
+}
+
+.emailContainer {
+    background-color: #758ca3;
+    height: 100%;
+    width: 100%;
+    border-radius: 3px;
+    padding: 2px 1px 1px 5px;
+}
+
+@media (min-width: 320px) {
+    .socialLinks {
+        top: 70%;
+        left: 48%;
+    }
+}
+
+@media (min-width: 350px) {
+    .socialLinks {
+        top: 70%;
+        left: 50%;
+    }
+}
+
+@media (min-width: 600px) {
+    .socialLinks {
+        top: 40%;
+        left: 52%;
+    }
 }

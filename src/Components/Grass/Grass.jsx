@@ -36,6 +36,7 @@ const Grass = () => {
   }
 
   return (
+    <div className={styles.grassWrapper}>
     <div className={styles.grassContainer}>
       {/* Front Row */}
       <div className={`${styles.row}`}>
@@ -50,7 +51,7 @@ const Grass = () => {
         ))}
       </div>
       {/* Back Row */}
-      <div className={`${styles.row} ${styles.backRow}`}>
+      <div className={`${styles.row}`}>
         {Array.from({ length: bladesPerRow }, (_, index) => (
           <div
             key={`back-${index}`}
@@ -61,6 +62,7 @@ const Grass = () => {
             }}
           />
         ))}
+      </div>
       </div>
     </div>
   );
