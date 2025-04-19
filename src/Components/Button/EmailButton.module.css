@@ -1,4 +1,4 @@
-.emailButtonContainer {
+/* .emailButtonContainer {
     display: flex;
     flex-direction:row;
     align-items: center;
@@ -12,7 +12,7 @@
     height: 40px;
     width: 40px;
     border-radius: 3px;
-    padding: 2px 1px 1px 5px;
+    padding: 2px 1px 0px 5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,5 +44,93 @@
     .emailSelect {
         padding: 4px;
         font-size: 14px;
+    }
+} */
+
+.emailButtonContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    white-space: nowrap;
+}
+
+.emailContainer {
+    background-color: #758ca3;
+    height: 40px;
+    width: 40px;
+    border-radius: 3px;
+    padding: 2px 1px 0px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.emailContainer:hover {
+    background-color: #5a6b7a;
+}
+
+.icon {
+    width: auto;
+    height: auto;
+}
+
+.emailOptions {
+    position: absolute;
+    left: 50%;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 8px 0;
+    min-width: 120px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.emailOptions.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(-60%);
+    pointer-events: auto;
+}
+
+.emailOption {
+    display: block;
+    width: 100%;
+    padding: 8px 12px;
+    border: none;
+    background: none;
+    text-align: left;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+}
+
+.emailOption:hover {
+    background-color: #f0f0f0;
+}
+
+.emailSelect {
+    padding: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.emailLink {
+    color: #0000EE;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .emailContainer {
+        height: 30px;
+        width: 30px;
+    }
+    
+    .emailOptions {
+        top: -10px;
     }
 }

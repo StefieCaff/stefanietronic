@@ -8,8 +8,7 @@ import Grass from '../Components/Grass/Grass';
 
 const Experience = () => {
     const experienceHeading = "The Stefie Ventures!";
-const experienceSubHeading = "Take a look at where I've worked and how I spend my time :)";
-
+    const experienceSubHeading = "Take a look at where I've worked and how I spend my time :)";
     return (
         <>
             <Heading
