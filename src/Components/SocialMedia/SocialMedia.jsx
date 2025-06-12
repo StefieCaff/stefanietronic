@@ -10,6 +10,7 @@ const SocialMedia = () => {
   return (
     <>
       <div className={styles.socialLinks}>
+        <div className={styles.socialLink}>
         <a
           href={githubProfileUrl}
           target='_blank'
@@ -22,7 +23,8 @@ const SocialMedia = () => {
             width={40}
             height={40}
           />
-        </a>
+          </a></div>
+         <div className={styles.socialLink}>
         <a
           href={linkedinProfileUrl}
           target='_blank'
@@ -35,7 +37,7 @@ const SocialMedia = () => {
             width={40}
             height={40}
           />
-        </a>
+        </a></div>
         {/* <a
           href={email}
           target='_blank'
@@ -51,7 +53,9 @@ const SocialMedia = () => {
             />
           </div>
         </a> */}
-              <EmailButton/>
+         <div className={styles.socialLink}>
+          <EmailButton />
+        </div>
       </div>
     </>
   );
