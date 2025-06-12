@@ -125,8 +125,7 @@ const Contact = () => {
     const heading = 'Greetings! Explore my social media profiles below.';
     const subHeading = (
         <>
-            For inquiries about joining your development team, climbing or yoga offerings, or other queries, feel free to reach out directly:
-            {' '}
+            For inquiries about joining your development team, climbing or yoga offerings, or other queries, feel free to reach out directly
             <span
                 onClick={handleEmailClick}
                 role="button"
@@ -136,9 +135,8 @@ const Contact = () => {
                 title="Email Stefie"
                 className={styles.emailLink}
             >
-                Email Stefie
-            </span>.
-            {' '}
+            </span>
+            {' :) '}
             Thank you!
         </>
     );

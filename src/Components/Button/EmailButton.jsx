@@ -7,37 +7,32 @@ const EmailButton = () => {
   const email = process.env.REACT_APP_EMAIL;
 
   const handleEmailClick = (service) => {
-    if (!email) {
-      console.error("Email address is not available, please use LinkedIn to connect.");
-      return;
-    }
+  if (!email) {
+    console.error("Email address is not available, please use LinkedIn GitHub or Instagram to connect.");
+    return;
+  }
 
-    let mailtoLink = '';
-    switch (service) {
-      case 'gmail':
-        mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}`;
-        break;
-      case 'yahoo':
-        mailtoLink = `https://compose.mail.yahoo.com/?to=${email}`;
-        break;
-      case 'outlook':
-        mailtoLink = `https://outlook.live.com/owa/?path=/mail/action/compose&to=${email}`;
-        break;
-      case 'default':
-        mailtoLink = `mailto:${email}`;
-        break;
-      default:
-        return;
-    }
+  let mailtoLink = '';
+  switch (service) {
+    case 'gmail':
+      mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}`;
+      break;
+    case 'yahoo':
+      mailtoLink = `https://compose.mail.yahoo.com/?to=${email}`;
+      break;
+    case 'outlook':
+      mailtoLink = `https://outlook.live.com/owa/?path=/mail/action/compose&to=${email}`;
+      break;
+    case 'default':
+    default:
+      mailtoLink = `mailto:${email}`;
+      break;
+  }
 
-    if (service === 'default') {
-      // Simple mailto: link
-      window.location.href = mailtoLink;
-    } else {
-      window.open(mailtoLink, '_blank');
-    }
-    setShowOptions(false);
-  };
+  // Open the link in a new tab
+  window.open(mailtoLink, '_blank');
+  setShowOptions(false);
+};
 
   const handleButtonClick = () => {
     setShowOptions(!showOptions);
