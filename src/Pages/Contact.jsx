@@ -9,7 +9,6 @@ import Footer from '../Components/Footer/Footer';
 import Cloud from '../Components/Clouds/Cloud';
 
 const Contact = () => {
-    const email = process.env.REACT_APP_EMAIL;
     const [animationState, setAnimationState] = useState('plane1');
     const svgRef = useRef(null);
 
