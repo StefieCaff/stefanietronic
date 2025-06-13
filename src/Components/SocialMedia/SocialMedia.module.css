@@ -10,7 +10,13 @@
     align-items: center;
     justify-content: center;
     margin: 5px;
+    transition: transform 0.5s ease, color 0.5s ease;
 }
+
+.socialLink:hover {
+    transform: scale(0.9);
+}
+
 .icon {
     width: auto;
     height: auto;

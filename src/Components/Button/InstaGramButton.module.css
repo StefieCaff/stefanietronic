@@ -3,15 +3,10 @@
 }
 
 .instagramButton {
-  background: none;
+  padding:0;
   border: none;
   cursor: pointer;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.instagramButton:hover {
-  transform: scale(1.1);
-  color: var(--hover-color);
+  background-color: transparent;
 }
 
 .icon {

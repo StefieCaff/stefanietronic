@@ -71,7 +71,7 @@ const EmailButton = () => {
             className={styles.emailOption}
             aria-label="Open default email client"
           >
-            Default Email
+            Default Email Client
           </button>
         </div>
       )}

@@ -16,7 +16,6 @@ const SocialMedia = () => {
           rel="noopener noreferrer"
           aria-label="GitHub Profile"
           title="Go Stefie's GitHub"
-          className={styles.socialLink}
         >
           <Svg
             symbolId="github"
@@ -33,7 +32,6 @@ const SocialMedia = () => {
           rel="noopener noreferrer"
           aria-label="LinkedIn Profile"
           title="Go Stefie's LinkedIn"
-          className={styles.socialLink}
         >
           <Svg
             symbolId="linkedin"

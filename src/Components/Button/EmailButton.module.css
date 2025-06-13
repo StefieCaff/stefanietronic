@@ -1,52 +1,3 @@
-/* .emailButtonContainer {
-    display: flex;
-    flex-direction:row;
-    align-items: center;
-    gap: 10px;
-    white-space: nowrap;
-
-}
-
-.emailContainer {
-    background-color: #758ca3;
-    height: 40px;
-    width: 40px;
-    border-radius: 3px;
-    padding: 2px 1px 0px 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-
-.icon {
-    width: auto;
-    height: auto;
-}
-
-.emailSelect {
-    padding: 5px;
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-@media (max-width: 600px) {
-    .emailButtonContainer {
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    .emailContainer {
-        height: 30px;
-        width: 30px;
-    }
-
-    .emailSelect {
-        padding: 4px;
-        font-size: 14px;
-    }
-} */
-
 .emailButtonContainer {
     display: flex;
     flex-direction: column;
@@ -64,10 +15,6 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-}
-
-.emailContainer:hover {
-    background-color: #5a6b7a;
 }
 
 .icon {
@@ -98,17 +45,19 @@
 .emailOption {
     display: block;
     width: 100%;
-    padding: 8px 12px;
+    padding: 8px 10px;
     border: none;
     background: none;
     text-align: left;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 18px;
     color: #333;
+    transition: color 0.5s ease;
+    font-weight: bold;
 }
 
 .emailOption:hover {
-    background-color: #f0f0f0;
+    color: #758ca3;
 }
 
 .emailSelect {
