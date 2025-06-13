@@ -57,10 +57,9 @@
 
 .emailContainer {
     background-color: #758ca3;
-    height: 40px;
-    width: 40px;
+    height: 35px;
+    width: 35px;
     border-radius: 3px;
-    padding: 2px 1px 0px 5px;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -87,7 +87,7 @@ const EmailButton = () => {
           symbolId='paperplane2'
           className={styles.icon}
           width={30}
-          height={36}
+          height={30}
         />
       </div>
     </div>

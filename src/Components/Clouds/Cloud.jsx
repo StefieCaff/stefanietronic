@@ -3,7 +3,7 @@ import Svg from "../Svg/Svg";
 import styles from './Clouds.module.css';
 import SocialMedia from '../SocialMedia/SocialMedia';
 
-const Cloud = () => {
+const SocialsCloud = () => {
     
     return (
         <>
@@ -23,5 +23,5 @@ const Cloud = () => {
     );
 };
 
-export default Cloud;
+export default SocialsCloud;
 
