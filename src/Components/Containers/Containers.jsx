@@ -57,7 +57,7 @@ const ImageGallery = ({ images }) => {
   return (
     <div style={gallery}>
       {images.map((image, index) => (
-        <div key={index} className={styles.imgContainer}> {/* Use className from CSS module */}
+        <div key={index} className={styles.imgContainer}>
           <img src={image.src} alt={image.alt} style={img} />
           <p style={caption}>{image.caption}</p>
         </div>
